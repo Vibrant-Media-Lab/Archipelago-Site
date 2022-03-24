@@ -152,7 +152,7 @@ function nextTimer(num){
  * Creates new timers once using form info
  */
 function handleSubmit(){
-  // event.preventDefault();
+  event.preventDefault(); // Prevents page from refreshing
 
   document.getElementById("all-timers").innerHTML = ""; // Clear any current timers
   
