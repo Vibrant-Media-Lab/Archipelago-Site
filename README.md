@@ -2,7 +2,7 @@
 
 ### To view the web app, follow this link:
 
-[Visit Web App](https://jennzheng12315.github.io/Archipelago)
+[Visit Web App](https://vibrant-media-lab.github.io/Archipelago-Site/)
 
 # About
 Created with JavaScript, HTML, and CSS, this web app sets up a series of timers based on user inputs. Each timer has three buttons:
@@ -12,7 +12,10 @@ Created with JavaScript, HTML, and CSS, this web app sets up a series of timers 
 
 Clicking the gear icon on the right takes the user back to the input fields, where they can enter new starting times. 
 
-## Modifications
+# Note
+* Timer audio does not seem to work on Apple mobile devices.
+
+# How to Make Changes to the Site
 To change the default time of a timer:
 * In `const DEFAULT_TIME` at the top of `script.js`, change the default time at the index the timer is at to the time you want (**IN SECONDS!**). For example, if you want timer 1 to have a default of 10 seconds, change `DEFAULT_TIME[1]` from 15 to 10.
 
