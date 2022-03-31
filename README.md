@@ -1,4 +1,4 @@
-# Archipelago
+# Archipelago Site
 
 ### To view the web app, follow this link:
 
