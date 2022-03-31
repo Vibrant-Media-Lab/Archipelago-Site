@@ -39,7 +39,7 @@ To add your own alarm:
 * Change the id to what you would like. There may not be two or more of the same ids.
 
 To assign alarms to a specific timer:
-* At the top of `script.js`, there is an array ALARMS that contains the ids of the alarms associated with each timer. e.g. `const ALARMS = ["", "default", "alarm2", "default", "default"]`.
+* At the top of `script.js`, there is an array ALARMS that contains the ids of the alarms associated with each timer. 
 * Change the id at the index the timer is at. For example, if you want to change timer 1's alarm to an alarm with say id "alarm2", you can change the second element (a.k.a. the element at index 1), "default" with "alarm2". Therefore, your array looks like this:  `const ALARMS = ["", "alarm2", "default", "default", "default"]`.
 * **MAKE SURE THAT THE IDS MATCH AN AUDIO ID IN `index.html`!**
 * _Note: The first id, "", is not used since there is not a timer 0. Furthermore, if no ids are provided or if the id is "", the alarm with the id "default" is used._ 
