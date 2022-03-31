@@ -3,7 +3,7 @@ const NUM_OF_TIMERS = 5;  // total number of timers
 // Array of alarm ids. Timer n uses the id from ALARMS[n].
 // Index 0 is not used. If no id is provided, the alarm named default plays
 // MAKE SURE THAT IDS MATCH WITH THE IDS IN THE HTML FILE!
-const ALARMS = ["", "default", "alarm2", "default", "default"];
+const ALARMS = ["", "default", "default", "default", "default", "default"];
 
 // Array of labels for input form. Works similarly to ALARMS.
 // If no label is provided, the label is blank
