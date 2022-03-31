@@ -154,6 +154,12 @@ function nextTimer(num){
 function handleSubmit(){
   event.preventDefault(); // Prevents page from refreshing
 
+  // Pauses any currently running timers before making changes
+  if (isPaused.includes(false)){
+    var index = isPaused.indexOf(false);
+    resetTimer(index);
+  }
+
   document.getElementById("all-timers").innerHTML = ""; // Clear any current timers
   
   for (var i = 1; i <= NUM_OF_TIMERS; i++){
