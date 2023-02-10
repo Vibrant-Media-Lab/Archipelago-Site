@@ -11,7 +11,7 @@ const LABELS = ["", "Planning/Minor Actions", "Movement, Rank 1", "Movement, Ran
 
 // Array of default times. Works similarly to ALARMS and LABELS.
 // If no time is provided, the default is 0
-const DEFAULT_TIME = [0, 15, 15, 15, 15, 15, 15];
+const DEFAULT_TIME = [0, 10, 15, 15, 15, 15, 15];
 
 var timerInfo;    // dictionary containing timer defaults in seconds
 var currentTimes; // dictionary containing the current times of the timers in seconds
