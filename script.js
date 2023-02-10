@@ -122,7 +122,6 @@ function resetTimer(num) {
  * @param {number} num The number of the timer
  */
 function nextTimer(num) {
-  console.log(currentTimer);
   // Don't do anything if the current timer is not running
   if (currentTimer != num)
     return;
@@ -153,7 +152,7 @@ function nextTimer(num) {
   var nextTimer = isShown.indexOf(true, num + 1); // Get next shown timer
   if (!isPaused.includes(false) && document.getElementById("roundComplete" + (nextTimer)).style.display == "none")
     document.getElementById("time" + (nextTimer)).style.color = "red";
-  currentTimer = num + 1;
+  currentTimer = nextTimer;
 }
 
 /**
@@ -213,6 +212,7 @@ function masterReset() {
   for (let i = 1; i <= NUM_OF_TIMERS; i++) {
     resetTimer(i);
   }
+  nextTimer(NUM_OF_TIMERS);
 }
 
 /**
