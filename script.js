@@ -19,6 +19,7 @@ var timers;       // dictionary of timer variables for startTimer() and stopTime
 
 var isPaused;     // array of booleans (true for paused, false for not paused)
 var isShown;      // array of booleans (true for shown timer, false for hidden)
+var currentTimer;
 
 /**
  * Starts counting down the timer
@@ -32,6 +33,7 @@ function startTimer(num) {
     return;
 
   isPaused[num] = false;
+  currentTimer = num;
 
   var duration = currentTimes['timer' + num];
 
@@ -120,6 +122,11 @@ function resetTimer(num) {
  * @param {number} num The number of the timer
  */
 function nextTimer(num) {
+  console.log(currentTimer);
+  // Don't do anything if the current timer is not running
+  if (currentTimer != num)
+    return;
+
   if (isPaused[num] == false)
     start_pauseTimer(num);
 
@@ -146,6 +153,7 @@ function nextTimer(num) {
   var nextTimer = isShown.indexOf(true, num + 1); // Get next shown timer
   if (!isPaused.includes(false) && document.getElementById("roundComplete" + (nextTimer)).style.display == "none")
     document.getElementById("time" + (nextTimer)).style.color = "red";
+  currentTimer = num + 1;
 }
 
 /**
@@ -421,6 +429,7 @@ window.onload = function () {
   currentTimes = {};
   isPaused = [true] // index 0 is a filler; there is no timer 0
   isShown = [true] // index 0 is a filler; there is no timer 0
+  currentTimer = 1;
   timers = {};
   for (var i = 1; i <= NUM_OF_TIMERS; i++) {
     timers["timer" + i] = null;
