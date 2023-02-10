@@ -11,7 +11,7 @@ body {
   text-align: center;
   background-image: url('assets/background.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-size: 100% 100%;
 }
 
@@ -22,7 +22,8 @@ span {
 /* ---------- CSS for input page ----------------- */
 
 input[type="number"] {
-  float: left; /* places input box next to label */
+  float: left;
+  /* places input box next to label */
   width: 25%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -36,7 +37,8 @@ input[type="number"] {
 }
 
 label {
-  float: left; /* places input box next to label */
+  float: left;
+  /* places input box next to label */
   text-align: right;
   font-size: 1.2em;
   font-weight: bold;
@@ -45,14 +47,14 @@ label {
   width: 40%;
 }
 
-.secText{
+.secText {
   width: 1em;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
 
 /* stops float before so submit button remains below inputs*/
-.inputs:after{
+.inputs:after {
   content: "";
   display: table;
   clear: both;
@@ -67,7 +69,7 @@ label {
 
 /* Shrink text size if screen gets too small */
 @media screen and (max-width: 550px) {
-  label{
+  label {
     font-size: 1em;
   }
 }
@@ -87,12 +89,13 @@ label {
 
 /* Adjust number of columns based on screen size*/
 @media screen and (max-width: 1000px) {
-  .column{
+  .column {
     width: 50%;
   }
 }
+
 @media screen and (max-width: 550px) {
-  .column{
+  .column {
     width: 100%;
   }
 }
@@ -102,7 +105,7 @@ label {
   font-size: 6em;
 }
 
-#gear_icon{
+#gear_icon {
   display: none;
   position: absolute;
   right: 10%;
@@ -134,7 +137,8 @@ button:active {
 }
 
 /* Submit button*/
-#submit {
+#submit,
+#master-reset-btn {
   height: 50px;
   width: 10em;
   margin: 20px 20px 20px 20px;
@@ -148,12 +152,13 @@ button:active {
   outline: none;
 }
 
-#submit:hover {
+#submit:hover,
+#master-reset-btn:hover {
   background-color: #0c6b3f;
 }
 
 /* All Timer buttons */
-.btns {   
+.btns {
   padding: 0;
   margin: 0;
   display: unset;
@@ -244,15 +249,15 @@ button:active {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #0c6b3f;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #0c6b3f;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);

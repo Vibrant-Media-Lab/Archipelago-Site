@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Archipelago</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+  <title>Archipelago</title>
 
-    <!-- import the webpage's javascript file -->
-    <script src="script.js" defer></script>
-  </head>
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    
-    <div id="top">
-      <img id="graphic" src="assets/graphic.png" alt="graphic" width="150">
-      <img id="gear_icon" src="assets/gear.png" onclick="turnOnForm()" alt="settings" width="30" height="30">
-    </div> 
-  
-    <!-- alarm(s) for when timer ends -->
-    <audio id="default"><source src="assets/bell.wav" type="audio/wav"></audio>
+  <!-- import the webpage's javascript file -->
+  <script src="script.js" defer></script>
+</head>
 
-    <form id="form"> </form>
-    
-    <div id="all-timers"> </div>
+<body>
 
-  </body>
+  <div id="top">
+    <img id="graphic" src="assets/graphic.png" alt="graphic" width="150">
+    <img id="gear_icon" src="assets/gear.png" onclick="turnOnForm()" alt="settings" width="30" height="30">
+  </div>
+
+  <!-- alarm(s) for when timer ends -->
+  <audio id="default">
+    <source src="assets/bell.wav" type="audio/wav">
+  </audio>
+
+  <form id="form"> </form>
+
+  <div id="all-timers"> </div>
+  <div id="master-reset">
+    <button id="master-reset-btn" onclick="masterReset()">Reset All Timers</button>
+  </div>
+
+</body>
+
 </html>
