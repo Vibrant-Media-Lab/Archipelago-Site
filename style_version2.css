@@ -1,0 +1,273 @@
+@font-face {
+  font-family: curseofvulkar;
+  src: url(assets/CurseOfVulKar.otf);
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  text-align: center;
+  background-image: url('assets/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+span {
+  font-size: 5em;
+}
+
+/* ---------- CSS for input page ----------------- */
+
+input[type="number"] {
+  float: left;
+  /* places input box next to label */
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  box-shadow: 2px 3px 7px #000408;
+  cursor: text;
+}
+
+#form {
+  display: unset;
+}
+
+label {
+  float: left;
+  /* places input box next to label */
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.3em;
+  margin-top: 0.7em;
+  width: 40%;
+}
+
+.secText {
+  width: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* stops float before so submit button remains below inputs*/
+.inputs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* error message */
+#error {
+  font-size: 2em;
+  font-weight: bold;
+  color: red;
+}
+
+/* Shrink text size if screen gets too small */
+@media screen and (max-width: 550px) {
+  label {
+    font-size: 1em;
+  }
+}
+
+/* ---------- CSS for timers page ----------------- */
+
+#all-timers {
+  display: unset;
+  height: auto;
+}
+
+/* Make 3 columns */
+.column {
+  width: 100%;
+  float: center;
+}
+
+/* Adjust number of columns based on screen size*/
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.time {
+  font-family: curseofvulkar;
+  font-size: 6em;
+}
+
+#gear_icon {
+  display: none;
+  position: absolute;
+  right: 10%;
+  cursor: pointer;
+  margin-top: 4em;
+}
+
+.roundComplete {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.label_name {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-top: 1.5em;
+}
+
+/* ------------- CSS for buttons ---------------- */
+
+button {
+  margin: 10px;
+}
+
+/* Creates pressed effect on button*/
+button:active {
+  box-shadow: 0 5px #666666;
+  transform: translateY(10%);
+}
+
+/* Submit button*/
+#submit,
+#master-reset-btn {
+  height: 50px;
+  width: 10em;
+  margin: 20px 20px 20px 20px;
+  border-radius: 20px;
+  background-color: #060c11;
+  color: #edf3fa;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 7px #3d3d3d;
+  outline: none;
+}
+
+#submit:hover,
+#master-reset-btn:hover {
+  background-color: #0c6b3f;
+}
+
+/* All Timer buttons */
+.btns {
+  padding: 0;
+  margin: 0;
+  display: unset;
+}
+
+.start_pause {
+  height: 2.5em;
+  width: 10em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10% #999999;
+  outline: none;
+  font-weight: bold;
+}
+
+.start_pause:hover {
+  background-color: #c9cacc;
+}
+
+.reset {
+  height: 2.5em;
+  width: 6.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10% #999999;
+  outline: none;
+  font-weight: bold;
+}
+
+.reset:hover {
+  background-color: #c9cacc;
+}
+
+.next {
+  height: 2.5em;
+  width: 6.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10% #999999;
+  outline: none;
+  font-weight: bold;
+}
+
+.next:hover {
+  background-color: #c9cacc;
+}
+
+/* ----- CSS for turning checkbox into slider ------- */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.9em;
+  width: 40px;
+  height: 13px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(141, 6, 6);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #0c6b3f;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #0c6b3f;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
